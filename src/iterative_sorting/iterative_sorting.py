@@ -14,7 +14,13 @@ def selection_sort(arr):
 
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
-
+    keep_sorting = True
+    while keep_sorting:
+        keep_sorting = False
+        for index, element in enumerate(arr[:-1]):
+            if element > arr[index + 1]:
+                arr[index], arr[index + 1] = arr[index + 1], arr[index]
+                keep_sorting = True
     return arr
 
 
@@ -23,6 +29,3 @@ def count_sort(arr, maximum=-1):
 
     return arr
 
-
-array = [3, 3, 5, 1, 9, 35, 1, 21, 10]
-print(selection_sort(array))
