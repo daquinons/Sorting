@@ -5,7 +5,7 @@ def merge(arrA, arrB):
     to_sort = list(arrA + arrB)
     for index, element in enumerate(merged_arr):
         min_element = None
-        for index_arrays_to_sort, element_to_sort in enumerate(to_sort):
+        for element_to_sort in to_sort:
             if min_element is None or min_element > element_to_sort:
                 min_element = element_to_sort
         merged_arr[index] = min_element
